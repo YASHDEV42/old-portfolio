@@ -168,6 +168,7 @@ h3 {
 }
 p {
   color: #777;
+  text-transform: capitalize;
 }
 .dark p {
   color: var(--black);
@@ -465,7 +466,9 @@ p {
   }
   .navigation.active {
     left: 0;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
   }
   .main {
     width: 100%;
@@ -473,11 +476,17 @@ p {
   }
   .main.active {
     left: 100%;
+    display: none;
   }
   .main .topbar {
     width: 100%;
     left: 0;
     padding: 0 20px;
+    visibility: visible;
+  }
+  .main .topbar.active {
+    width: 100vw;
+    visibility: visible;
   }
   .navigation ul {
     padding: 20px 20px;
